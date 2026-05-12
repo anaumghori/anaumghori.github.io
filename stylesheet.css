@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -53,12 +57,34 @@ pageheading {
   margin: 0 auto;
 }
 
+.page-shell-inner {
+  padding: 20px;
+}
+
 .page-shell > tbody > tr > td {
   padding: 20px;
 }
 
 .page-header td {
   padding: 20px;
+}
+
+.page-header-blog {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px;
+}
+
+.page-header-back,
+.page-header-action {
+  flex: 0 0 auto;
+}
+
+.page-title-row {
+  text-align: center;
+  padding: 0 20px 20px;
 }
 
 .home-intro {
@@ -127,6 +153,12 @@ body.dark-mode #theme-toggle {
   --blog-heading-h6-size: 14px;
 }
 
+#blog-toc-container,
+#blog-content {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 #blog-content h1,
 #blog-content h2,
 #blog-content h3,
@@ -136,6 +168,21 @@ body.dark-mode #theme-toggle {
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   font-weight: 600;
+}
+
+#blog-content h1,
+#blog-content h2,
+#blog-content h3,
+#blog-content h4,
+#blog-content h5,
+#blog-content h6,
+#blog-content p,
+#blog-content li,
+#blog-content blockquote,
+#blog-content figcaption,
+#blog-toc-container a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 #blog-content h1 { font-size: var(--blog-heading-h1-size); }
@@ -160,6 +207,7 @@ body.dark-mode #theme-toggle {
 
 #blog-toc-container .blog-toc {
   margin: 0;
+  max-width: 100%;
 }
 
 #blog-toc-container .blog-toc summary {
@@ -194,6 +242,15 @@ body.dark-mode #theme-toggle {
 
 #blog-content details summary::marker {
   font-size: 0.8em;
+}
+
+#blog-content p code,
+#blog-content li code,
+#blog-content td code,
+#blog-content th code,
+#blog-content blockquote code {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 #blog-content .blog-theme-diagram {
@@ -440,8 +497,20 @@ body.dark-mode #blog-content .hljs-class .hljs-title {
     padding: 12px;
   }
 
+  .page-shell-inner {
+    padding: 12px;
+  }
+
   .page-header td {
     padding: 12px;
+  }
+
+  .page-header-blog {
+    padding: 12px;
+  }
+
+  .page-title-row {
+    padding: 0 12px 12px;
   }
 
   .home-intro {
